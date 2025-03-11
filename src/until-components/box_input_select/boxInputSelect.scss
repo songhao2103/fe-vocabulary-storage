@@ -1,0 +1,64 @@
+.box_input_select_component {
+  width: 100%;
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .box_options_list {
+    padding: 10px 20px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 36px;
+    display: none;
+    flex-direction: column;
+    background-color: $white;
+
+    .desc {
+      cursor: pointer;
+
+      &:hover {
+        color: $dark-pink;
+      }
+    }
+  }
+
+  .placeholder_message {
+    background-color: $white;
+    position: absolute;
+    top: -8px;
+    font-size: 1.2rem;
+    color: $dark-gray;
+    left: 10px;
+  }
+
+  .box_options_list.active {
+    display: flex;
+    z-index: 1000;
+  }
+
+  .layout_input_select {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+  }
+
+  .layout_input_select.active {
+    display: block;
+  }
+
+  .error {
+    position: absolute;
+    top: 36px;
+    color: $dark-pink;
+    font-size: 1.2rem;
+  }
+}

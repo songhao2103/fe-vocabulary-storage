@@ -1,0 +1,186 @@
+.home_page {
+  .desc {
+    @include desc-black;
+  }
+
+  .nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-bottom: 3px solid#ccc;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: $white;
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    .box_search {
+      display: flex;
+      align-items: center;
+      width: 30%;
+      position: relative;
+
+      input {
+        padding: 7px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+
+      .icon {
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+
+  .box_content_page {
+    .box_add_vocabulary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+
+      .btn_dark_pink {
+        @include btn-dark-pink;
+      }
+    }
+
+    .box_vocabulary_list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      .box_vocabulary {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+
+        .headword,
+        .part_of_speech,
+        .meaning {
+          width: 20%;
+        }
+
+        .box_turn {
+          width: 15%;
+        }
+
+        .icon_mic {
+          width: 10%;
+          cursor: pointer;
+          font-size: 2.2rem;
+
+          &:hover {
+            color: $dark-pink;
+          }
+        }
+
+        .turn_remembered {
+          height: 25px;
+          width: 50px;
+          border-radius: 12.5px;
+          border: 2px solid #ccc;
+          cursor: pointer;
+          display: flex;
+
+          .dot {
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background-color: $dark-gray;
+          }
+        }
+
+        .turn_remembered.remembered {
+          background-color: #b37fa2;
+          justify-content: end;
+
+          .dot {
+            background-color: $dark-pink;
+          }
+        }
+
+        .icon_capitalize {
+          width: 10%;
+          font-size: 2.2rem;
+          cursor: pointer;
+          color: $dark-gray;
+
+          &:hover {
+            color: #f39494;
+          }
+        }
+
+        .icon_capitalize.active {
+          color: $dark-pink;
+        }
+
+        .box_option_vocabulary {
+          position: relative;
+          display: flex;
+          justify-content: end;
+          width: 5%;
+
+          input {
+            display: none;
+          }
+
+          input:checked ~ .layout_option_vocabulary {
+            display: block;
+          }
+
+          input:checked ~ .option_list {
+            display: flex;
+          }
+
+          .layout_option_vocabulary {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+            display: none;
+          }
+
+          .icon {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 2.2rem;
+
+            &:hover {
+              color: $dark-pink;
+            }
+          }
+
+          .option_list {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px 10px 10px;
+            background-color: $white;
+            border-radius: 5px;
+            position: absolute;
+            right: 20px;
+            display: none;
+            z-index: 1000;
+            border: 1px solid #ccc;
+
+            .desc {
+              cursor: pointer;
+
+              &:hover {
+                color: $dark-pink;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

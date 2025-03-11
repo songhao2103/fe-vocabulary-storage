@@ -1,0 +1,36 @@
+.box_input_component {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+
+  .desc {
+    @include desc-black;
+  }
+
+  input {
+    padding: 7px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .placeholder {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    font-size: 1.2rem;
+    background-color: $white;
+    color: $dark-gray;
+    display: none;
+  }
+
+  .placeholder.active {
+    display: block;
+  }
+
+  .error {
+    color: $dark-pink;
+    position: absolute;
+    top: 36px;
+    font-size: 1.2rem;
+  }
+}

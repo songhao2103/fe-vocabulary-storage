@@ -1,0 +1,63 @@
+.box_select_component {
+  position: relative;
+
+  .input_select {
+    display: none;
+  }
+
+  .input_select:checked ~ .layout_select {
+    display: block;
+  }
+
+  .input_select:checked ~ .selects_topic_list {
+    display: flex;
+  }
+
+  .layout_select {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+  }
+
+  .box_result {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+
+    &:hover {
+      .desc {
+        color: $dark-pink;
+      }
+    }
+  }
+
+  .selects_topic_list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    top: 36px;
+    border: 1px solid #ccc;
+    padding: 10px 20px 10px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    background-color: $white;
+
+    .desc {
+      cursor: pointer;
+
+      &:hover {
+        color: $dark-pink;
+      }
+    }
+  }
+}

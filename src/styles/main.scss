@@ -1,0 +1,23 @@
+//reset.scss
+@import "./reset.scss";
+
+// mixins
+@import "./mixin.scss";
+
+// variables
+@import "./variables.scss";
+
+//homePage.scss
+@import "../components/home-page/homePage.scss";
+
+//boxInput
+@import "../until-components/box-input/boxInput.scss";
+
+//boxSelect
+@import "../until-components/box-select/boxSelect.scss";
+
+//boxInputSelect
+@import "../until-components/box_input_select/boxInputSelect.scss";
+
+//popupVocabulary
+@import "../components/popup-vocabulary/popupVocabulary.scss";
